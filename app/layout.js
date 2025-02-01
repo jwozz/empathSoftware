@@ -1,5 +1,7 @@
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import { Tangerine, Inter, Geist, Geist_Mono } from "next/font/google";
+import "./globals.css";import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
+config.autoAddCss = false;
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -9,6 +11,18 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+export const inter = Inter({
+  weight: ['400', '800', '500', '600', '700'],
+  subsets: ['latin'],
+  display: 'swap',
+});
+
+export const tangerine = Tangerine({
+  weight: ['400', '700'],
+  subsets: ['latin'],
+  display: 'swap',
 });
 
 export const metadata = {
